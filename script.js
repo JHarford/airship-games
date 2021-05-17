@@ -1747,6 +1747,7 @@ const unique2 = unique.filter(
     !client.includes('HEADSPACE') &&
     !client.includes('OFFICE') &&
     !client.includes('KLM') &&
+    !client.includes('HMRC') &&
     !client.includes('AER') &&
     !client.includes('SCUBLI') &&
     !client.includes('NSP') &&
@@ -1756,7 +1757,7 @@ const unique2 = unique.filter(
     !client.includes('?') &&
     !client.includes('SNIPE') &&
     !client.includes('CYBERPOWE') &&
-    !client.includes('Audible') &&
+    !client.includes('AUDIBLE') &&
     !client.includes('X 0.11') &&
     !client.includes('X 0.12') &&
     !client.includes('LEGAL') &&
