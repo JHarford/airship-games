@@ -1725,26 +1725,26 @@ const split = arr.map((client) => {
   return client.split(' *')[0].toUpperCase()
 })
 
-const unique = [...new Set(split)]
-
-const unique2 = unique.filter(
+const unique = split.filter(
   (client) =>
     !client.includes('STRIPE') &&
-    !client.includes('BGC') &&
-    !client.includes('BBP') &&
-    !client.includes('20') &&
     !client.includes('.co.uk') &&
-    !client.includes('21') &&
-    !client.includes('19') &&
-    !client.includes('18') &&
-    !client.includes('17') &&
-    !client.includes('16') &&
-    !client.includes('15') &&
+    !client.includes('-21') &&
+    !client.includes('-20') &&
+    !client.includes('-19') &&
+    !client.includes('-18') &&
+    !client.includes('-17') &&
+    !client.includes('-16') &&
+    !client.includes('-15') &&
+    !client.includes('209861') &&
+    !client.includes('GAME DEVELOPERS') &&
+    !client.includes('EXPEDIA') &&
     !client.includes('.COM') &&
     !client.includes('LUXEM') &&
     !client.includes('TOTAL') &&
     !client.includes('104') &&
     !client.includes('HEADSPACE') &&
+    !client.includes('NORTH WEST') &&
     !client.includes('OFFICE') &&
     !client.includes('KLM') &&
     !client.includes('HMRC') &&
@@ -1755,23 +1755,47 @@ const unique2 = unique.filter(
     !client.includes('SCAN C') &&
     !client.includes('CHASUS') &&
     !client.includes('?') &&
+    !client.includes('AN MAT G LTD') &&
     !client.includes('SNIPE') &&
     !client.includes('CYBERPOWE') &&
     !client.includes('AUDIBLE') &&
     !client.includes('X 0.11') &&
+    !client.includes('X.165') &&
     !client.includes('X 0.12') &&
     !client.includes('LEGAL') &&
     !client.includes('PayPal') &&
     !client.includes('VIRGIN') &&
     !client.includes('ANNES') &&
     !client.includes('DMITRI') &&
+    !client.includes('GROUND RENTA') &&
     !client.includes('MARCH') &&
     !client.includes('LYTHAM') &&
+    !client.includes('FYLDE') &&
+    !client.includes('LOYALTY') &&
     !client.includes('DEBITCARD') &&
+    !client.includes('GONZALO') &&
     !client.includes('23653860711349 ') &&
     !client.includes('EB') &&
     !client.includes('USD')
 )
+
+unique.forEach((client, idx) => {
+  client.includes('SUPERMASSIVE') ? (unique[idx] = 'SUPERMASSIVE GAMES') : ''
+  client.includes('LUCID') ? (unique[idx] = 'LUCID DEV') : ''
+  client.includes('D3T') ? (unique[idx] = 'D3T') : ''
+  client.includes('LOCKWOOD') ? (unique[idx] = 'LOCKWOOD') : ''
+  client.includes('SKYHOOK') ? (unique[idx] = 'SKYHOOK') : ''
+  client.includes('BOSSA') ? (unique[idx] = 'BOSSA STUDIOS') : ''
+  client.includes('NETEASE') ? (unique[idx] = 'NETEASE') : ''
+  client.includes('UBISOFT ELECTRO') ? (unique[idx] = 'UBISOFT') : ''
+  client.includes('1/DON') ? (unique[idx] = 'DONT NOD ENTERTAINMENT') : ''
+  client.includes('1/KOA') ? (unique[idx] = 'KOA LABS') : ''
+  client.includes('1/GUE') ? (unique[idx] = 'GUERILLA GAMES') : ''
+  client.includes('1/NC SOFT') ? (unique[idx] = 'NC SOFT') : ''
+  client.includes('1/YAGER') ? (unique[idx] = 'YAGER') : ''
+})
+
+const unique2 = [...new Set(unique)]
 
 const clientNumber = document.getElementById('clientNumber')
 const clientDiv = document.getElementById('clients')
