@@ -1760,6 +1760,7 @@ const unique2 = unique.filter(
     !client.includes('X 0.12') &&
     !client.includes('LEGAL') &&
     !client.includes('PayPal') &&
+    !client.includes('VIRGIN') &&
     !client.includes('ANNES') &&
     !client.includes('DMITRI') &&
     !client.includes('MARCH') &&
