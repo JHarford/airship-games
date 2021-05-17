@@ -1729,7 +1729,7 @@ const unique = [...new Set(split)]
 
 const unique2 = unique.filter(
   (client) =>
-    !client.includes('Stripe') &&
+    !client.includes('STRIPE') &&
     !client.includes('BGC') &&
     !client.includes('BBP') &&
     !client.includes('20') &&
@@ -1742,7 +1742,7 @@ const unique2 = unique.filter(
     !client.includes('15') &&
     !client.includes('.COM') &&
     !client.includes('LUXEM') &&
-    !client.includes('Total') &&
+    !client.includes('TOTAL') &&
     !client.includes('104') &&
     !client.includes('HEADSPACE') &&
     !client.includes('OFFICE') &&
